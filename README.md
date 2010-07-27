@@ -1,3 +1,5 @@
+# English
+
 ## Prepare a node to run chef-solo (in Ubuntu)
 
 ### Prepare the ssh connection (so that you don't have to enter the password). Be careful with this one !
@@ -26,8 +28,7 @@
     Usage: launch-solo user host
 
 
-----
-
+# Español
 
 ## Preparar un nodo para utilizar chef-solo
 

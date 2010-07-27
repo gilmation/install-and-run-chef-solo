@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# Connect to the given host (arg 2) as the given user (arg 1)
+# Copy over the setup script from this directory
+# Run the setup script
+#
+
+ARGS_EXPECTED=2
+
+if [[ $# -ne $ARGS_EXPECTED ]]; then
+  echo "Usage: `basename $0` user host"
+  exit 1
+fi
+
+if [[ ! -x ./configure ]]; then
+  echo "Oops, [./configure] is not executable !"
+  echo "Going to try a [chmod 755 ./configure]"
+  chmod 755 ./configure
+fi
+
+scp -p ./configure $1@$2:~/configure
+
+ssh $1@$2 "~/configure"

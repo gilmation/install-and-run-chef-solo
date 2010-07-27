@@ -1,0 +1,41 @@
+#!/bin/bash
+
+ARGS_EXPECTED=2
+
+if [[ $# -ne $ARGS_EXPECTED ]]; then
+  echo "Usage: `basename $0` user host"
+  exit 1
+fi
+
+ssh $1@$2 "sudo mkdir -pm 755 /etc/chef"
+
+# In the current version of tar for mac os x 10.5 there is no substitution option to remove 
+# directories from the output of tar archives, in 10.6 tar has a [-s pattern] option.
+# So we need to build the structure here
+
+# Get the solo.rb config file
+cp -p ./chef-repo/config/solo.rb .
+
+# Get the node config 
+# It's a good idea not to store the live version of this file under source control
+# Use this command to get it from a local dir
+#cp -p $HOME/.$DOT_DIR_NAME/chef_solo_node.json .
+
+# Put the files on the server
+tar -zc ./solo.rb ./chef_solo_node.json | ssh $1@$2 "cd /etc/chef; sudo tar -zx"
+
+# Delete the files that we copied in to create the tar structure
+rm ./solo.rb
+#rm ./chef_solo_node.json
+
+# Copy over the repository files
+cd chef-repo
+tar -zc ./cookbooks ./site-cookbooks | ssh $1@$2 "cd /etc/chef; sudo tar -zx"
+cd -
+
+# Run chef solo
+ssh $1@$2 "sudo chef-solo -j /etc/chef/chef_solo_node.json"
+
+# Delete the chef instalation dir so that you don't leave your chef_solo_node.json
+# file or other system information lying around.
+ssh $1@$2 "sudo rm -rf /etc/chef/*"

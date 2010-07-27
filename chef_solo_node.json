@@ -1,0 +1,36 @@
+{
+  "recipes": [ "", "" ],
+  "mysql": {
+    "server_root_password": "",
+    "bind_address": "127.0.0.1",
+    "datadir": "/var/lib/mysql"
+  },
+  "app_server": {
+    "web_root": "/var/www/sites",
+    "apache_user": "www-data",
+    "apache_group": "www-data",
+    "domain_name": "",
+    "domain": "",
+    "mode": "0755"
+  },
+  "apps": [{
+      "ftp_dir_name": "",
+      "deploy_dir_name": "",
+      "version_sql": "",
+      "schema_name": "",
+      "keep_config": "true",
+      "config_dir_name": "config",
+      "force_app_deploy": "false"
+  }],
+  "bd_scripts": [{
+      "ftp_dir_name": "",
+      "schema_name": "",
+      "admin_user": "",
+      "admin_password": "",
+      "version_sql": ""
+  }],
+  "aws": {
+  "access_key_id": "",
+  "secret_access_key": ""
+  }
+}

@@ -1,8 +1,8 @@
 # English
 
-## Prepare a node to run chef-solo (in Ubuntu)
+### Prepare a node to run chef-solo (in Ubuntu)
 
-### Prepare the ssh connection (so that you don't have to enter the password). Be careful with this one !
+#### Prepare the ssh connection (so that you don't have to enter the password). Be careful with this one !
 
     $ pwd
     install-and-run-chef-solo
@@ -10,7 +10,7 @@
     $ ./sshSetup
     Usage: sshSetup user host
 
-### Prior preparation for the node
+#### Prior preparation for the node
 
     $ pwd
     install-and-run-chef-solo
@@ -18,9 +18,9 @@
     $ ./launch
     Usage: launch user host
 
-## Run chef recipies in a node with chef-solo
+### Run chef recipies in a node with chef-solo
 
-### Execute our chef recipies
+#### Execute our chef recipies
 
     $pwd
     install-and-run-chef-solo
@@ -30,9 +30,9 @@
 
 # Español
 
-## Preparar un nodo para utilizar chef-solo
+### Preparar un nodo para utilizar chef-solo
 
-### Preparación de la conexión ssh (para no tener que entrar la contraseña). Ten cuidado con este !
+#### Preparación de la conexión ssh (para no tener que entrar la contraseña). Ten cuidado con este !
 
     $ pwd
     install-and-run-chef-solo
@@ -40,7 +40,7 @@
     $ sshSetup
     Usage: sshSetup user host
 
-### Preparación previo para el nodo
+#### Preparación previo para el nodo
 
     $ pwd
     install-and-run-chef-solo
@@ -48,9 +48,9 @@
     $ ./launch
     Usage: lanzar user host
 
-## Lanzar las recetas de chef en un nodo con chef-solo
+### Lanzar las recetas de chef en un nodo con chef-solo
 
-### Ejecutar nuestras recetas de chef
+#### Ejecutar nuestras recetas de chef
 
     $pwd
     install-and-run-chef-solo

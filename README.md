@@ -1,4 +1,4 @@
-## The process of preparing a node to run chef-solo (in Ubuntu)
+## Prepare a node to run chef-solo (in Ubuntu)
 
 ### Prepare the ssh connection (so that you don't have to enter the password). Be careful with this one !
 
@@ -16,7 +16,7 @@
     $ ./launch
     Usage: launch user host
 
-## The process for running chef recipies in a node with chef-solo
+## Run chef recipies in a node with chef-solo
 
 ### Execute our chef recipies
 
@@ -26,8 +26,10 @@
     Usage: launch-solo user host
 
 
+----
 
-## El proceso para preparar un nodo para utilizar chef-solo
+
+## Preparar un nodo para utilizar chef-solo
 
 ### Preparación de la conexión ssh (para no tener que entrar la contraseña). Ten cuidado con este !
 
@@ -45,7 +47,7 @@
     $ ./launch
     Usage: lanzar user host
 
-## El proceso para lanzar las recetas de chef en un nodo con chef-solo
+## Lanzar las recetas de chef en un nodo con chef-solo
 
 ### Ejecutar nuestras recetas de chef
 

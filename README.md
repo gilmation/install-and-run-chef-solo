@@ -18,15 +18,22 @@
     $ ./launch
     Usage: launch user host
 
-### Run chef recipies in a node with chef-solo
+### Run chef recipes in a node with chef-solo
 
-#### Execute our chef recipies
+#### Execute our chef recipes
 
-    $pwd
+    $ pwd
     install-and-run-chef-solo
     $ ./launch-solo
     Usage: launch-solo user host
 
+### Add your recipes to the _chef-repo_
+
+#### 3rd party recipes go in cookbooks and your own ones live in site-cookbooks
+
+    $ pwd
+    install-and-run-chef-solo
+    $ cd chef-repo
 
 # Español
 
@@ -52,8 +59,16 @@
 
 #### Ejecutar nuestras recetas de chef
 
-    $pwd
+    $ pwd
     install-and-run-chef-solo
     $ ./launch-solo
     Usage: launch-solo user host
+
+### Añadir las recetas al _chef-repo_
+
+#### Recetas de terceros en cookbooks y nuestras propias viven en site-cookbooks
+
+    $ pwd
+    install-and-run-chef-solo
+    $ cd chef-repo
 
